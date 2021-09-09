@@ -85,9 +85,9 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-let port = 4000
 
-app.listen(port, () => {
+const PORT = process.env.PORT || 4000
+app.listen(PORT, (req, res) => {
     startWhitelist(10);
-    console.log(`Example app listening at http://localhost:${port}`)
-})
+    console.log(`server listening on port: ${PORT}`)
+  });
