@@ -13,7 +13,7 @@ app.use(cors())
 
 const owner = "CyBizpsEVPjycYiaCMaDQFkHJWrPZJsBYWeYTz3JYVPX";
 
-const wl = ['http://localhost:3000', 'http://localhost:8080', 'https://shrouded-journey-38552.heroku.com']
+const wl = ['http://localhost:3000', 'http://localhost:8080', 'https://sleepy-atoll-58033.herokuapp.com/']
 const corsOptions = {
   origin: function (origin, callback) {
     console.log("** Origin of request " + origin)
