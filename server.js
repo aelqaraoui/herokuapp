@@ -7,6 +7,11 @@ const cors = require('cors')
 
 const path = require('path');
 
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(cors())
+
+const owner = "CyBizpsEVPjycYiaCMaDQFkHJWrPZJsBYWeYTz3JYVPX";
 
 
 if (process.env.NODE_ENV === 'production') {
@@ -21,6 +26,6 @@ if (process.env.NODE_ENV === 'production') {
 
 const PORT = process.env.PORT || 4000
 app.listen(PORT, (req, res) => {
-    startWhitelist(10);
+    //startWhitelist(10);
     console.log(`server listening on port: ${PORT}`)
   });
