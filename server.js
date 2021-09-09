@@ -40,11 +40,6 @@ const startWhitelist = (num) => {
     fs.writeFileSync('transactionsDB.json', JSON.stringify({}));
 }
 
-app.get('/', (req, res) => {
-    
-    res.send("Hello There!")
-})
-
 const registerMint = (num, address, signature) => {
     let mintsLeftDB = JSON.parse(fs.readFileSync('mintsLeftDB.json', 'utf-8'));
     let transactionsDB = JSON.parse(fs.readFileSync('transactionsDB.json', 'utf-8'));
